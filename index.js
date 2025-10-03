@@ -8,7 +8,12 @@ const client = require('prom-client');  // 👈 import prom-client
 const uri_api = "https://rickandmortyapi.com/api/character";
 const app = express();
 const port = process.env.PORT;
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:3000",   // frontend local
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}));
   // 📊 Registro global de métricas
 const register = new client.Registry();
 client.collectDefaultMetrics({ register });

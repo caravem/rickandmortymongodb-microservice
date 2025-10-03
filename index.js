@@ -9,7 +9,7 @@ const uri_api = "https://rickandmortyapi.com/api/character";
 const app = express();
 const port = process.env.PORT;
 app.use(cors({
-  origin: "http://localhost:3000",   // frontend local
+  origin: "http://localhost:3001",   // frontend local
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true

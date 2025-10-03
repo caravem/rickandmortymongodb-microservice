@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: rickandmorty
-          image: caravem/rickandmorty:2a8a0b2456ddfc70dd723e7fdc405e4a4334c1ae
+          image: caravem/rickandmorty:3df3d717bcf184ce92b3e5379370114721b69e99
           ports:
             - containerPort: 3000
           envFrom:
